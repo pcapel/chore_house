@@ -1,0 +1,10 @@
+FROM nginx:1.13.8
+
+
+WORKDIR /etc
+
+COPY nginx nginx/
+COPY conf.d conf.s/
+
+
+EXPOSE 8080:80

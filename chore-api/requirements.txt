@@ -1,0 +1,6 @@
+uwsgi
+flask
+sqlalchemy
+flask-sqlalchemy
+graphene_sqlalchemy
+flask-graphql

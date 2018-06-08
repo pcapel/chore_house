@@ -1,0 +1,23 @@
+version: '3'
+services:
+  chore-api:
+    container_name: chores
+    build:
+      context: ./chore-api
+    depends_on:
+      - database
+    volumes:
+      - C:\Users\Philip\mystuff\chore_house\chore-api\chores:/chores
+  reverse-proxy:
+    container_name: nginx
+    build:
+      context: ./reverse-proxy
+    depends_on:
+      - chore-api
+    volumes:
+      - C:\Users\Philip\mystuff\chore_house\reverse-proxy\conf.d:/etc/conf.d
+      - C:\Users\Philip\mystuff\chore_house\reverse-proxy\nginx:/etc/nginx
+  database:
+    container_name: postgres
+    build:
+      context: ./database

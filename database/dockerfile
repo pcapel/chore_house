@@ -1,0 +1,4 @@
+FROM postgres:latest
+
+ENV POSTGRES_PASSWORD 'lolwut?'
+ENV POSTGRES_USER 'chores'
